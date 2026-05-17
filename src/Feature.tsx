@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { MeshConfig, YRoom } from "@baditaflorin/mesh-common";
+import { MeshNameInput, type MeshConfig, type YRoom } from "@baditaflorin/mesh-common";
 import * as Y from "yjs";
 
 type Props = { room: YRoom | null; config: MeshConfig };
@@ -74,11 +74,11 @@ export function Feature({ room, config }: Props) {
     <div className="pot-screen">
       <header className="pot-header">
         <h1>potluck</h1>
-        <input
+        <MeshNameInput
           className="pot-name"
-          placeholder="your name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={setName}
+          placeholder="your name"
           maxLength={24}
         />
         <p className="pot-status">
