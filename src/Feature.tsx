@@ -74,6 +74,10 @@ export function Feature({ room, config }: Props) {
     <div className="pot-screen">
       <header className="pot-header">
         <h1>potluck</h1>
+        <p className="pot-tagline">
+          Add what you&rsquo;re bringing — if two people pick the same dish, both see a ×2 warning
+          live.
+        </p>
         <MeshNameInput
           className="pot-name"
           value={name}
@@ -124,7 +128,10 @@ export function Feature({ room, config }: Props) {
           );
         })}
         {allItems.length === 0 && (
-          <li className="pot-empty">nothing yet — what are you bringing?</li>
+          <li className="pot-empty">
+            nothing yet — add a dish above. Share the 📡 invite (or open a second tab) and watch it
+            sync.
+          </li>
         )}
       </ul>
     </div>
