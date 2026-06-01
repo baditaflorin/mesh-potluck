@@ -53,6 +53,14 @@ body,
   text-align: center;
 }
 
+.pot-tagline {
+  margin: 0;
+  max-width: 30rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--mesh-muted);
+}
+
 .pot-status {
   margin: 0;
   font-size: 0.78rem;
